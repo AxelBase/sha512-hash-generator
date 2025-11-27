@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <title>AxelBase – SHA-512 Hash Generator</title>
+    <link rel="icon" href="../../AxelLab-Logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script>
+      ;(function () {
+        const theme = localStorage.getItem('theme') ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        document.documentElement.setAttribute('data-bs-theme', theme)
+      })()
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    
+		<link href="../../_app/immutable/assets/0.CWjSu9L3.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/8.-VFpJNm9.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.9G95DWa8.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BJpvK2-v.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C5H_RDvN.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CMyQDm8B.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BM32HcGK.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.BWWBjDHk.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BYH3r23n.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CJ842f1F.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DrlJFPYb.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DKC6kEEk.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Dx7drU80.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.BLDYXskd.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/IdW2gMIA.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DmK9Gsns.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DtNzQnm5.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DIQRVAsC.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BL_Pea-X.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/8.CCOnIrni.js"><!--12qhfyh--><meta name="theme-color" content="#999950"/><!----><!--led0iy--><meta name="description" content="Understand the differences between Hex, Base64, and Base64url encodings for SHA-512 hashes — and exactly when to use each in real-world scenarios."/> <meta property="og:title" content="Hex vs Base64 vs Base64url: The Definitive Guide"/> <meta property="og:description" content="From JWTs to file verification — choose the right SHA-512 output format every time."/> <meta property="og:url" content="../../blog/posts/post4"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/><!----><title>Hex vs Base64 vs Base64url: When to Use Which Format | AxelBase Blog</title>
+  </head>
+
+  <body data-sveltekit-preload-data="hover" class="bg-body text-body">
+    <div style="display: contents"><!--[--><!--[--><!----><div style="display: flex; flex-direction: column; min-height: 100vh;"><header class="custom-navbar"><nav class="container" style="display: flex; justify-content: space-between; align-items: center;"><div style="display: flex; align-items: center; gap: 0.8rem;"><a href="../../" aria-label="Home"><img src="../../AxelLab-Logo.ico" alt="Logo" class="navbar-brand-logo"/></a> <a class="navbar-brand-text" href="../../" style="text-decoration: none;">AxelBase</a></div> <ul style="list-style: none; display: flex; align-items: center; gap: 1rem; margin: 0;"><li class="d-none d-md-block"><a class="nav-link" href="../../">Home</a></li> <li class="d-none d-md-block"><a class="nav-link" href="../../#about">About</a></li> <li class="d-none d-md-block"><a class="nav-link" href="../../#how-to-use">How to use</a></li> <li class="d-none d-md-block"><a class="nav-link" href="../../#faq">FAQ</a></li> <li class="d-none d-md-block"><a class="nav-link" href="../../blog">Blog</a></li> <li class="nav-item bmac-nav-item"><button class="bmac-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> <span class="d-none d-sm-inline">Buy me a coffee</span></button> <!--[!--><!--]--></li></ul></nav></header> <main style="flex: 1;"><!--[--><!----><div class="container fade-in post-layout svelte-led0iy"><div class="breadcrumbs svelte-led0iy"><a href="../../blog" class="svelte-led0iy">Blog</a> <span>/</span> <p>Hex vs Base64 vs Base64url</p></div> <article class="prose svelte-led0iy"><h1 class="svelte-led0iy">Hex vs Base64 vs Base64url: When to Use Which Format</h1> <p class="post-meta">Published: November 27, 2025</p> <p>AxelBase displays your SHA-512 hash in three formats simultaneously. But they’re not interchangeable. Choosing the wrong one can break URLs, JWTs, or verification scripts.</p> <h2 class="svelte-led0iy">1. Hexadecimal (128 characters)</h2> <p>The classic. Human-readable, case-insensitive, and universally supported.</p> <ul class="svelte-led0iy"><li class="svelte-led0iy">Used by: Linux distros, GPG, Windows certutil, GitHub release checksums</li> <li class="svelte-led0iy">Perfect for: terminal commands, documentation, text files</li> <li class="svelte-led0iy">Downside: 100% size overhead (512 bits to 1024 bits of text)</li></ul> <h2 class="svelte-led0iy">2. Base64 (88 characters, ends with =)</h2> <p>33% smaller than hex. Standard in emails, HTTP headers, and data URIs.</p> <ul class="svelte-led0iy"><li class="svelte-led0iy">Used by: MIME, JSON Web Tokens (JWS), some APIs</li> <li class="svelte-led0iy">Contains: <code>+</code> and <code>/</code> — must be URL-encoded in links</li> <li class="svelte-led0iy">Padding: uses <code>=</code> to reach multiple of 4</li></ul> <h2 class="svelte-led0iy">3. Base64url (86–88 characters, no padding)</h2> <p>The URL-safe variant. Designed for web tokens and APIs.</p> <ul class="svelte-led0iy"><li class="svelte-led0iy">Replaces <code>+</code> to <code>-</code> and <code>/</code> to <code>_</code></li> <li class="svelte-led0iy">Removes <code>=</code> padding</li> <li class="svelte-led0iy">Used by: JWT (JSON Web Tokens), OAuth2, OpenID Connect, modern APIs</li></ul> <h2 class="svelte-led0iy">Quick Decision Guide</h2> <table class="table table-bordered text-start svelte-led0iy" style="width:100%; margin: 2rem 0;"><thead class="table-primary"><tr><th class="svelte-led0iy">Use Case</th><th class="svelte-led0iy">Best Format</th></tr></thead><tbody><tr><td class="svelte-led0iy">Verifying a Linux ISO</td><td class="svelte-led0iy"><strong>Hex</strong></td></tr><tr><td class="svelte-led0iy">Pasting into terminal</td><td class="svelte-led0iy"><strong>Hex</strong></td></tr><tr><td class="svelte-led0iy">Storing in JSON or database</td><td class="svelte-led0iy"><strong>Base64</strong></td></tr><tr><td class="svelte-led0iy">Using in URLs or JWTs</td><td class="svelte-led0iy"><strong>Base64url</strong></td></tr><tr><td class="svelte-led0iy">Sharing via link</td><td class="svelte-led0iy"><strong>Base64url</strong></td></tr></tbody></table> <p>AxelBase gives you all three instantly — so you’re never stuck with the wrong format.</p> <p class="italic-note svelte-led0iy">One hash. Three formats. Zero excuses.</p></article></div><!----><!--]--></main> <footer class="text-center"><div class="container"><p class="mb-1 text-muted">© AxelBase SHA-512 Hash Generator – 2025</p> <div class="d-flex justify-content-center gap-3"><a href="../../privacy">Privacy Policy</a> <span>•</span> <a href="../../terms">Terms of Service</a></div></div></footer></div><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_7sgrwe = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/sha512-hash-generator"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.9G95DWa8.js"),
+						import("../../_app/immutable/entry/app.BWWBjDHk.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 8],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+  </body>
+</html>

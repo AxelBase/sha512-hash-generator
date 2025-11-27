@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <title>AxelBase – SHA-512 Hash Generator</title>
+    <link rel="icon" href="./AxelLab-Logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script>
+      ;(function () {
+        const theme = localStorage.getItem('theme') ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        document.documentElement.setAttribute('data-bs-theme', theme)
+      })()
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    
+		<link href="./_app/immutable/assets/0.CWjSu9L3.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/2.CfbbVXXc.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.9G95DWa8.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BJpvK2-v.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/C5H_RDvN.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CMyQDm8B.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BM32HcGK.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.BWWBjDHk.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BYH3r23n.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CJ842f1F.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DrlJFPYb.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DKC6kEEk.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Dx7drU80.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.BLDYXskd.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/IdW2gMIA.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DmK9Gsns.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DtNzQnm5.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DIQRVAsC.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BL_Pea-X.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.CiCdq353.js"><!--12qhfyh--><meta name="theme-color" content="#999950"/><!---->
+  </head>
+
+  <body data-sveltekit-preload-data="hover" class="bg-body text-body">
+    <div style="display: contents"><!--[--><!--[--><!----><div style="display: flex; flex-direction: column; min-height: 100vh;"><header class="custom-navbar"><nav class="container" style="display: flex; justify-content: space-between; align-items: center;"><div style="display: flex; align-items: center; gap: 0.8rem;"><a href="./" aria-label="Home"><img src="./AxelLab-Logo.ico" alt="Logo" class="navbar-brand-logo"/></a> <a class="navbar-brand-text" href="./" style="text-decoration: none;">AxelBase</a></div> <ul style="list-style: none; display: flex; align-items: center; gap: 1rem; margin: 0;"><li class="d-none d-md-block"><a class="nav-link" href="./">Home</a></li> <li class="d-none d-md-block"><a class="nav-link" href="./#about">About</a></li> <li class="d-none d-md-block"><a class="nav-link" href="./#how-to-use">How to use</a></li> <li class="d-none d-md-block"><a class="nav-link" href="./#faq">FAQ</a></li> <li class="d-none d-md-block"><a class="nav-link" href="./blog">Blog</a></li> <li class="nav-item bmac-nav-item"><button class="bmac-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> <span class="d-none d-sm-inline">Buy me a coffee</span></button> <!--[!--><!--]--></li></ul></nav></header> <main style="flex: 1;"><!--[--><!----><div class="container py-5"><div class="row justify-content-center"><div class="col-lg-10 col-xl-8"><div class="text-center mb-5"><h1 class="display-5 fw-bold text-primary">AxelBase</h1> <p class="lead text-muted">SHA-512 Hash Generator – 100% Client-Side • No Tracking • Offline-Capable</p></div> <div class="d-grid gap-4"><div class="card mb-4"><div class="card-header"><h5 class="mb-0">Text Input (FR-01 &amp; FR-02)</h5></div> <div class="card-body"><div class="mb-3"><label for="encoding" class="form-label">Encoding</label> <select id="encoding" class="form-select"><!--[--><option value="utf8" selected>UTF-8 (default)</option><option value="utf16le">UTF-16LE</option><option value="latin1">Latin1 (ISO-8859-1)</option><option value="hex">Hex</option><!--]--></select></div> <div class="mb-3"><label for="textInput" class="form-label">Enter text</label> <textarea id="textInput" class="form-control font-monospace svelte-1e5va0l" rows="6" placeholder="Type or paste your text here..."></textarea></div> <!--[!--><!--]--></div></div> <!--[!--><!--]--><!----> <div class="card mb-4"><div class="card-header"><h5 class="mb-0">File Hashing (FR-03 &amp; FR-08)</h5></div> <div class="card-body"><div role="region" aria-label="File drop zone" class="border border-2 border-dashed rounded-3 p-5 text-center position-relative"><!--[--><i class="bi bi-cloud-arrow-up display-1 text-muted"></i> <p class="mt-3 mb-0">Drag &amp; drop a file here, or click to select</p><!--]--> <input type="file" class="position-absolute top-0 start-0 w-100 h-100 opacity-0 cursor-pointer" aria-label="Select file"/></div> <!--[!--><!--]--></div></div><!----> <!--[!--><!--]--> <!--[!--><!--]--> <!--[!--><!--]--><!----> <div class="card mb-4"><div class="card-header"><h5 class="mb-0">Hash Comparison (FR-06)</h5></div> <div class="card-body"><div class="row g-3"><div class="col-md-6"><label for="hash1" class="form-label">Hash 1</label> <input id="hash1" type="text" class="form-control font-monospace" value="" placeholder="Paste first hash..."/></div> <div class="col-md-6"><label for="hash2" class="form-label">Hash 2</label> <input id="hash2" type="text" class="form-control font-monospace" value="" placeholder="Paste second hash..."/></div></div> <!--[!--><p class="text-muted text-center mt-3">Enter two hashes to compare</p><!--]--></div></div><!----> <div class="text-center mb-5"><button class="btn btn-lg btn-outline-danger px-5"><i class="bi bi-trash"></i> Clear All (FR-09)</button></div><!----></div></div></div></div> <section id="about" class="py-5 bg-light"><div class="container"><div class="row justify-content-center"><div class="col-lg-9"><h2 class="text-primary fw-bold mb-4 display-5">About AxelBase</h2> <div class="lead fs-5 text-muted mb-5 text-center">The fastest, most private, fully offline-capable SHA-512 hash generator on the web — built for security professionals, developers, and privacy advocates.</div> <div class="row g-4"><div class="col-md-6"><div class="card h-100 border-0 shadow-sm"><div class="card-body p-4"><h4 class="fw-bold text-primary mb-3">100% Client-Side</h4> <p>Unlike every other online hash tool, <strong>AxelBase never uploads your files or text</strong>. All hashing is performed locally using the browser’s native Web Crypto API — the same technology trusted by banks and password managers.</p> <p>No logs. No tracking. No telemetry. Your data never leaves your device — not even for a millisecond.</p></div></div></div> <div class="col-md-6"><div class="card h-100 border-0 shadow-sm"><div class="card-body p-4"><h4 class="fw-bold text-primary mb-3">Built for Real-World Use</h4> <p>AxelBase was created to solve the exact problems faced daily by Linux users, DevOps engineers, blockchain developers, and security auditors:</p> <ul class="list-unstyled"><li>Verifying multi-gigabyte ISOs and backups</li> <li>Confirming GPG-signed release checksums</li> <li>Generating secure hashes for JWTs and API tokens</li> <li>Validating torrent and archival downloads</li></ul> <p class="mt-3">That’s why we support <strong>streaming large files</strong>, <strong>three output formats</strong>, and <strong>real-time progress + speed</strong>.</p></div></div></div></div> <div class="text-center mt-5"><p class="fs-5 text-muted">AxelBase is open source (MIT licensed), installable as a PWA, works completely offline, and runs at near-native speed thanks to hardware-accelerated SHA-512 in modern CPUs.</p> <p class="fw-bold text-primary">Privacy isn’t a feature — it’s the entire foundation.</p></div></div></div></div></section> <section id="how-to-use" class="py-5"><div class="container"><div class="row justify-content-center"><div class="col-lg-9"><h2 class="text-primary fw-bold mb-5 display-5 text-center">How to Use AxelBase</h2> <div class="row g-4"><div class="col-lg-4"><div class="text-center mb-4"><div class="display-1 text-primary mb-3">1</div> <h4 class="fw-bold">Hash Text Instantly</h4> <p class="text-muted">Type or paste any text — passwords, messages, API keys, or code snippets — into the top input box.</p> <p>The SHA-512 hash appears <strong>immediately</strong> in Hex, Base64, and Base64url formats.
+                Change encoding (UTF-8, UTF-16LE, Latin1, Hex input) to match your exact use case.</p></div></div> <div class="col-lg-4"><div class="text-center mb-4"><div class="display-1 text-primary mb-3">2</div> <h4 class="fw-bold">Verify Files of Any Size</h4> <p class="text-muted">Drag and drop a file — from a few KB to 100+ GB — directly onto the dropzone.</p> <p>AxelBase streams the file in 1 MB chunks, updating a running digest without freezing your browser.
+                Watch real-time progress, current speed (MB/s), and final hash in all three formats.</p></div></div> <div class="col-lg-4"><div class="text-center mb-4"><div class="display-1 text-primary mb-3">3</div> <h4 class="fw-bold">Copy &amp; Compare</h4> <p class="text-muted">Click any "Copy" button to send the hash to your clipboard with instant toast feedback.</p> <p>Use the built-in <strong>Hash Comparison</strong> tool to instantly verify two hashes match — perfect for confirming downloads or detecting tampering.</p></div></div></div> <div class="alert alert-success mt-5 text-center fs-5"><strong>Pro Tip:</strong> Install AxelBase as a PWA (click the install icon in your browser) to use it offline forever — even on air-gapped systems.</div></div></div></div></section> <section id="faq" class="py-5 bg-light"><div class="container"><div class="row justify-content-center"><div class="col-lg-9"><h2 class="text-primary fw-bold mb-5 display-5 text-center">Frequently Asked Questions</h2> <div class="accordion accordion-flush" id="faqAccordion"><div class="accordion-item border rounded-3 mb-3 shadow-sm"><h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q1">Is my data really never sent anywhere?</button></h2> <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body"><strong>Yes — 100% guaranteed.</strong> All hashing happens locally using the browser’s built-in <code>crypto.subtle.digest('SHA-512')</code>. Network requests are monitored — zero bytes are ever transmitted during use.</div></div></div> <div class="accordion-item border rounded-3 mb-3 shadow-sm"><h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q2">Is there a file size limit?</button></h2> <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">No hard limit exists. AxelBase streams files in chunks, keeping memory usage under ~10 MB even for 100 GB+ files. Performance depends only on your device’s storage speed and browser (Chrome/Edge recommended).</div></div></div> <div class="accordion-item border rounded-3 mb-3 shadow-sm"><h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q3">Why SHA-512 and not SHA-3 or BLAKE3?</button></h2> <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">SHA-512 has native, hardware-accelerated support in every modern browser and CPU. It’s trusted by Linux distros, blockchain, and TLS. While newer algorithms are excellent, only SHA-512 offers universal, blazing-fast, proven implementation today.</div></div></div> <div class="accordion-item border rounded-3 mb-3 shadow-sm"><h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q4">Can I use AxelBase offline?</button></h2> <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Absolutely. Click the install icon in your browser’s address bar to add AxelBase as a standalone app. Once installed, it works forever without internet — perfect for secure environments.</div></div></div> <div class="accordion-item border rounded-3 mb-3 shadow-sm"><h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q5">Is AxelBase open source?</button></h2> <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes! Fully MIT licensed. Fork it, audit it, improve it, or self-host it. Source available at <a href="https://github.com/axelbase/sha512-hash-generator" target="_blank">GitHub</a>.</div></div></div></div> <p class="text-center mt-5 text-muted fs-5">Still have questions? <a href="./blog" class="text-primary fw-bold">Read our blog</a> or open an issue on GitHub.</p></div></div></div></section><!----><!--]--></main> <footer class="text-center"><div class="container"><p class="mb-1 text-muted">© AxelBase SHA-512 Hash Generator – 2025</p> <div class="d-flex justify-content-center gap-3"><a href="./privacy">Privacy Policy</a> <span>•</span> <a href="./terms">Terms of Service</a></div></div></footer></div><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_7sgrwe = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						assets: "/sha512-hash-generator"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./_app/immutable/entry/start.9G95DWa8.js"),
+						import("./_app/immutable/entry/app.BWWBjDHk.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
