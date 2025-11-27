@@ -4,7 +4,7 @@
   import '../app.css';
 
   // PayPal Configuration
-  const paypalUsername = 'YOUR_USERNAME'; // UPDATE THIS LATER
+  const paypalUsername = 'AxelLab427'; // UPDATE THIS LATER
   const donationAmounts = [1, 3, 5, 10];
   
   let isDropdownOpen = false;
