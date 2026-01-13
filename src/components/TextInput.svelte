@@ -57,7 +57,7 @@
 
 <div class="card mb-4">
   <div class="card-header">
-    <h5 class="mb-0">Text Input (FR-01 & FR-02)</h5>
+    <h5 class="mb-0">Text Input</h5>
   </div>
   <div class="card-body">
     <div class="mb-3">

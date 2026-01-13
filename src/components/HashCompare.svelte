@@ -6,7 +6,7 @@
 
 <div class="card mb-4">
   <div class="card-header">
-    <h5 class="mb-0">Hash Comparison (FR-06)</h5>
+    <h5 class="mb-0">Hash Comparison</h5>
   </div>
   <div class="card-body">
     <div class="row g-3">

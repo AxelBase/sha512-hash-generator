@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://axelbase.github.io/sha512-hash-generator/sitemap.xml
+Sitemap: https://sha512-hash-generator.vercel.app/sitemap.xml

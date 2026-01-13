@@ -18,7 +18,7 @@
 {#if hex}
   <div class="card mb-4">
     <div class="card-header">
-      <h5 class="mb-0">SHA-512 Result (FR-04 & FR-05)</h5>
+      <h5 class="mb-0">SHA-512 Result</h5>
     </div>
     <div class="card-body">
       <div class="row g-3">
